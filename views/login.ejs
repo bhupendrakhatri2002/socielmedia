@@ -1,0 +1,27 @@
+<!-- header of body -->
+<%-include("partials/header")%>
+
+<!-- nav of body -->
+<%-include("partials/nav")%>
+
+<!-- here the content present in body or page -->
+ <div class="w-[80%] h-[70vh] bg-red-400 m-auto mt-10 flex flex-col items-center justify-center rounded-2xl border-4">
+   <h1 class="w-[50%] text-center font-bold text-6xl text-black-500 py-10 ">This Is Login Page</h1>
+
+  <form class=" w-[40%] text-center font-bold text-xl " action="">
+    <input class="w-[100%] py-2 border-2 px-10 text-red-400 " type="text" name="username" placeholder="Username"><br><br>
+    <input class="w-[100%] py-1 border-2 px-10" type="password" name="password" placeholder="Password" id=""><br><br>
+    <a href="" class="text-red-700">Forgot Password?</a>
+
+  </form>
+
+   <p class="flex justify-center items-center gap-10 text-2xl pt-7 font-normal">
+    <a class="bg-blue-400 px-8 py-1 rounded-2xl border-2 hover:text-white hover:bg-cyan-300" href="/register">Register</a>
+    <a class="bg-blue-400 px-8 py-1 rounded-2xl border-2 hover:text-white hover:bg-cyan-300" href="/login">Login</a>
+   </p>
+  
+ </div>
+
+
+<!-- footer of body- -->
+<%-include("partials/footer")%>
