@@ -4,7 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+// add passport here
+const passport =require("passport")
+const session =require("express-session")
+const User=require("./models/userschema")
+
 const db =require('./models/connect')
+
+
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -19,6 +26,23 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// create seession and connect passport here-and always do above routes
+app.use(
+  session({
+    saveUninitialized:true,
+    resave:true,
+    secret:"khatri"
+  })
+);
+// initialise passport
+app.use(passport.initialize());
+app.use(passport.session());
+
+// create serial for a user
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
