@@ -6,23 +6,20 @@
 
 <!-- here the content present in body or page -->
 
- <div class="w-[100%] h-[90vh] bg-[url('https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9naW4lMjBwYWdlfGVufDB8fDB8fHww')] bg-no-repeat bg-cover pt-10 text-center rounded-2xl border-4">
+ <div class="w-[100%] h-[90vh] bg-[url('https://images.unsplash.com/photo-1535376472810-5d229c65da09?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJsYWNrJTIwYmFja2dyb3VuZCUyMGltYWdlfGVufDB8fDB8fHww')] bg-no-repeat bg-cover pt-10 text-center rounded-2xl border-4">
 
-  <div class="log w-[30%] flex flex-col items-center justify-center m-auto rounded-2xl p-7 bg-black">
+  <div class="log w-[30%] flex flex-col items-center justify-center m-auto rounded-2xl p-7 bg-black opacity-100">
        
-  <h1 class="w-[80%] text-center font-bold text-2xl py-4 m-auto my-3 rounded-2xl">This Is Login Page</h1>
+  <h1 class="w-[80%] text-center font-bold text-4xl py-4 m-auto my-3 text-green-400 rounded-2xl">This Is Login Page</h1>
   
-  <form class=" w-[70%] text-center font-bold text-xl " action="/login-user" method="post">
-    <input class="w-[100%] py-2 border-2 px-10 rounded-2xl " type="text" name="username" placeholder="Username"><br><br>
-    <input class="w-[100%] py-1 border-2 px-10 rounded-2xl" type="password" name="password" placeholder="Password" id=""><br><br>
-    <a href="" class="text-red-700">Forgot Password?</a>
-
+  <form class=" w-[70%] text-center font-bold text-xl  " action="/login-user" method="post">
+    <input class="w-[100%] py-2 border-2 px-10 rounded-2xl  " type="text" name="username" placeholder="Username"><br><br>
+    <input class="w-[100%] py-2 border-2 px-10 rounded-2xl" type="password" name="password" placeholder="Password" id=""><br><br>
+    <a href="" class="text-red-600">Forgot Password?</a><br><br>
+      <button type="submit" class="text-white">Login</button><br><br>
   </form>
-
-   <p class="flex justify-center items-center gap-10 text-2xl pt-7 font-normal">
-    <a class="bg-blue-400 px-8 py-1 rounded-2xl border-2 hover:text-white hover:bg-cyan-300" href="/register">Register</a>
-    <a class="bg-blue-400 px-8 py-1 rounded-2xl border-2 hover:text-white hover:bg-cyan-300" href="/login">Login</a>
-   </p>
+  <a href="/register" class="text-white">Register</a>
+   
   </div>
   
  </div>

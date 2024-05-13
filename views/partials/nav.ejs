@@ -1,9 +1,14 @@
 
 <nav class="p-4  h-[10vh] text-2xl flex items-center justify-center m-auto gap-10 font-bold " >
    
-    <a class="ps-10 hover:text-blue-600" href="/">Home</a>
-    <a class="ps-10 hover:text-blue-600" href="/about">About</a>
-    <a class="pe-10 hover:text-red-600" href="/login">Login</a>
-    <a class="pe-10 hover:text-red-600" href="/logout-user">Logout</a>
+   <% if(user){ %>
+        <a class="ps-10 hover:text-blue-600" href="/profile">Home</a>
+        <a class="pe-10 hover:text-red-600" href="/logout-user">Logout</a>
+   <% }else{%>
+        <a class="ps-10 hover:text-blue-600" href="/">Home</a>
+        <a class="pe-10 hover:text-red-600" href="/login">Login</a>
+   <% }%>
     
+    <a class="ps-10 hover:text-blue-600" href="/about">About</a>
+     
 </nav>
